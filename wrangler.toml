@@ -1,0 +1,6 @@
+# Cloudflare Pages — PRISM CUP 2026
+# デプロイコマンド: npx wrangler pages deploy . --project-name prismcup2026
+
+name = "prismcup2026"
+compatibility_date = "2026-04-14"
+pages_build_output_dir = "."
