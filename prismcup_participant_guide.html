@@ -202,7 +202,7 @@
     margin-bottom: 8px;
   }
   .price-amount {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 900;
     color: #f5c518;
     line-height: 1.2;
@@ -210,10 +210,12 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
   .price-amount small {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: rgba(255,255,255,0.7);
     white-space: nowrap;
@@ -396,7 +398,7 @@
     .section { padding: 24px; margin: 16px; }
     .info-grid, .price-grid, .cast-grid { grid-template-columns: 1fr; }
     .info-card.full { grid-column: auto; }
-    .price-amount { font-size: 1.8rem; }
+    .price-amount { font-size: 1.5rem; }
     .tl-time { min-width: 75px; font-size: 0.8rem; }
   }
 </style>
