@@ -66,42 +66,44 @@
   /*
     Grid rows (3px/min, 10min slots use 36px minimum):
     R1  17:30–18:00  30min = 90px
-    R2  18:00–18:10  10min = 36px  ← 受付（短縮）
+    R2  18:00–18:10  10min = 52px  ← 受付（短縮）
     R3  18:10–19:00  50min = 150px ← 開会セレモニー
     R4  19:00–20:30  90min = 270px ← 試合
     R5  20:30–20:50  20min = 60px
-    R6  20:50–21:00  10min = 36px
-    R7  21:00–21:30  30min = 90px
-    R8  21:30–22:00  30min = 90px
-    R9  22:00–22:30  30min = 90px
+    R6  20:50–21:00  10min = 52px
+    R7  21:00–21:30  30min = 90px  ← 更衣
+    R8  21:30–22:00  30min = 90px  ← 懇親会・入り
+    R9  22:00–23:00  60min = 180px ← 懇親会・本開演
     R10 end label           = 20px
   */
   .tl-grid {
     display: grid;
     grid-template-columns: 1fr 68px 1fr;
     grid-template-rows:
-      minmax(90px, auto)   /* R1  17:30–18:00 */
-      minmax(36px, auto)   /* R2  18:00–18:10 */
-      minmax(150px, auto)  /* R3  18:10–19:00 */
-      minmax(270px, auto)  /* R4  19:00–20:30 */
-      minmax(60px, auto)   /* R5  20:30–20:50 */
-      minmax(36px, auto)   /* R6  20:50–21:00 */
-      minmax(90px, auto)   /* R7  21:00–21:30 */
-      minmax(90px, auto)   /* R8  21:30–22:00 */
-      minmax(90px, auto)   /* R9  22:00–22:30 */
-      20px                 /* R10 end         */
+      90px   /* R1  17:30–18:00 */
+      52px   /* R2  18:00–18:10 */
+      150px  /* R3  18:10–19:00 */
+      270px  /* R4  19:00–20:30 */
+      60px   /* R5  20:30–20:50 */
+      52px   /* R6  20:50–21:00 */
+      90px   /* R7  21:00–21:30 */
+      90px   /* R8  21:30–22:00 */
+      180px  /* R9  22:00–23:00 */
+      20px   /* R10 end         */
     ;
   }
 
   /* event cell */
   .ev {
-    padding: 10px 13px;
+    padding: 8px 13px;
     overflow: visible;
     border-radius: 8px;
     margin: 3px 5px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
   }
 
   .ev-title { font-weight: 700; font-size: 13px; line-height: 1.4; }
@@ -183,6 +185,9 @@
 <body>
 
 <header>
+  <div style="text-align:center; padding:0 0 16px;">
+    <img src="prism cup logo.png" alt="PRISM CUP" style="height:80px; width:auto; display:inline-block;">
+  </div>
   <div class="badge">SCHEDULE REVIEW</div>
   <h1>⚽ PRISM CUP タイムスケジュール</h1>
   <p style="font-size:14px;color:#94a3b8;margin-top:6px;">8チーム制 ／ 2グループ交互ローテーション ／ 高さは実際の時間に比例</p>
@@ -197,7 +202,7 @@
 
   <!-- column headers -->
   <div class="col-headers">
-    <div class="col-h flat">🏠 平面エリア<div class="sub">17:30〜22:30 利用可</div></div>
+    <div class="col-h flat">🏠 平面エリア（＋1F飲食ブース）<div class="sub">17:30〜23:00 利用可</div></div>
     <div class="col-h mid">時刻</div>
     <div class="col-h court">⚽ フットサルコート<div class="sub">18:10〜21:30 利用可</div></div>
   </div>
@@ -236,22 +241,32 @@
     <!-- R6: 空き（移動中） -->
     <div class="ev empty" style="grid-column:1; grid-row:6;"></div>
 
-    <!-- R7–R8: 懇親会 21:00–22:00 (span 2 rows) -->
-    <div class="ev c-party" style="grid-column:1; grid-row:7/9;">
-      <div class="ev-title">🥂 懇親会・名刺交換</div>
-      <div class="ev-time">21:00 〜 22:00（60分）</div>
+    <!-- R7: 更衣 21:00–21:30 -->
+    <div class="ev c-move" style="grid-column:1; grid-row:7;">
+      <div class="ev-title">👕 更衣・着替え</div>
+      <div class="ev-time">21:00 〜 21:30（30分）</div>
+      <div class="ev-note">フットサルウェアから着替え</div>
+    </div>
+
+    <!-- R8: 懇親会・入り 21:30–22:00 -->
+    <div class="ev c-party" style="grid-column:1; grid-row:8;">
+      <div class="ev-title">🥂 懇親会・入り</div>
+      <div class="ev-time">21:30 〜 22:00（30分）</div>
       <div class="ev-note">
-        ・軽食・ドリンク提供<br>
-        ・ネットワーキング<br>
-        ・平面エリアで実施
+        ・1階 飲食ブースへ移動<br>
+        ・ドリンク受取・着席
       </div>
     </div>
 
-    <!-- R9: 撤収 22:00–22:30 -->
-    <div class="ev c-prep" style="grid-column:1; grid-row:9;">
-      <div class="ev-title">📦 撤収・退館準備</div>
-      <div class="ev-time">22:00 〜 22:30（30分）</div>
-      <div class="ev-note">平面エリア完全退館</div>
+    <!-- R9: 懇親会・本開演 22:00–23:00 -->
+    <div class="ev c-party" style="grid-column:1; grid-row:9;">
+      <div class="ev-title">🎊 懇親会・本開演</div>
+      <div class="ev-time">22:00 〜 23:00（60分）</div>
+      <div class="ev-note">
+        ・1階 飲食ブースにて実施<br>
+        ・軽食・ドリンク提供<br>
+        ・名刺交換・ネットワーキング
+      </div>
     </div>
 
     <!-- ══ AXIS COLUMN ══ -->
@@ -264,7 +279,7 @@
     <div class="ax major" style="grid-column:2; grid-row:7;"><span class="ax-time">21:00</span></div>
     <div class="ax" style="grid-column:2; grid-row:8;"><span class="ax-time">21:30</span></div>
     <div class="ax" style="grid-column:2; grid-row:9;"><span class="ax-time">22:00</span></div>
-    <div class="ax" style="grid-column:2; grid-row:10;"><span class="ax-time">22:30</span></div>
+    <div class="ax major" style="grid-column:2; grid-row:10;"><span class="ax-time">23:00</span></div>
 
     <!-- ══ COURT COLUMN ══ -->
 
@@ -277,10 +292,10 @@
       <div class="ev-title">🎉 開会セレモニー</div>
       <div class="ev-time">18:10 〜 19:00（50分）</div>
       <div class="ev-note">
-        ① 参加者紹介<br>
-        ② 佐々木：参加チーム紹介＋競技説明＋チーム・グループ分け発表<br>
+        ① 荻田から一言（オープニングスピーチ）<br>
+        ② 佐々木：競技説明＋チーム・グループ分け発表<br>
         ③ 荻田：全員ウォームアップ（オリンピアン指導）<br>
-
+        ④ 山崎・佐藤：ミニレクチャー
       </div>
     </div>
 
@@ -341,8 +356,8 @@
   <div class="s-box" style="background:rgba(14,165,233,.1); border:1px solid rgba(14,165,233,.3);">
     <div class="s-box-label" style="color:#0ea5e9;">🏟 会場利用時間</div>
     <div class="s-box-body">
-      平面エリア：<strong style="color:#7dd3fc;">17:30 〜 22:30</strong><br>
-      　設営 / 受付 / マッサージ＆観戦 / 懇親会<br><br>
+      平面エリア：<strong style="color:#7dd3fc;">17:30 〜 23:00</strong><br>
+      　設営 / 受付 / マッサージ＆観戦 / 更衣 / 懇親会（1F飲食ブース）<br><br>
       フットサルコート：<strong style="color:#7dd3fc;">18:10 〜 21:30</strong><br>
       　開会セレモニー(18:10) / 試合 / 表彰式（20:30〜20:50）
     </div>
