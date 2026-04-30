@@ -176,24 +176,42 @@
 
   /* PRINT BUTTON */
   .print-btn { display: inline-block; margin-top: 20px; padding: 10px 24px; background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.3); border-radius: 8px; color: var(--sky); font-size: 13px; font-weight: 700; cursor: pointer; }
+
+/* ===== PRISM CUP — Mainvisual Hero ===== */
+.pc-mv{position:relative;background:radial-gradient(120% 80% at 50% 0%, #1a1040 0%, #0a0e1a 65%);padding:32px 16px 0;overflow:hidden;text-align:center;color:#e8eaf0;font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;border-bottom:1px solid rgba(255,255,255,0.06);}
+.pc-mv::before,.pc-mv::after{content:'';position:absolute;width:360px;height:360px;border-radius:50%;filter:blur(70px);opacity:.32;z-index:0;pointer-events:none;}
+.pc-mv::before{background:#7c3aed;top:-160px;left:-120px;}
+.pc-mv::after{background:#0ea5e9;bottom:-180px;right:-140px;}
+.pc-mv-frame{position:relative;z-index:1;max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px -15px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.07);background:#0a0e1a;transition:transform .5s ease;}
+.pc-mv-frame:hover{transform:translateY(-2px);}
+.pc-mv-frame img{display:block;width:100%;height:auto;}
+.pc-mv-tag{display:inline-block;margin:20px auto 0;padding:6px 16px;border-radius:999px;background:rgba(167,139,250,.14);border:1px solid rgba(167,139,250,.42);color:#c4b5fd;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;position:relative;z-index:1;}
+.pc-mv-sub{position:relative;z-index:1;margin:12px auto 0;font-size:13.5px;line-height:1.7;color:#94a3b8;max-width:720px;padding:0 16px;font-weight:400;}
+.pc-mv-meta{position:relative;z-index:1;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 10px;padding:20px 16px 30px;font-size:12.5px;font-weight:600;color:#cbd5e1;}
+.pc-mv-meta span{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:999px;letter-spacing:.02em;}
+.pc-mv-fade{height:36px;background:linear-gradient(to bottom,transparent,#0a0e1a);}
+@media (max-width:600px){.pc-mv{padding:18px 10px 0;}.pc-mv-frame{border-radius:12px;}.pc-mv-tag{font-size:10px;padding:5px 12px;letter-spacing:2px;margin-top:16px;}.pc-mv-sub{font-size:12.5px;}.pc-mv-meta{font-size:11.5px;gap:6px 8px;padding-bottom:24px;}.pc-mv-meta span{padding:4px 10px;}}
+
 </style>
 </head>
 <body>
-<!-- ▼ MAIN TOP HERO IMAGE ▼ -->
-<div class="prism-top-hero" style="background:#0a0e1a;text-align:center;padding:0;margin:0;">
-  <img src="prismcup_top.png" alt="PRISM CUP 2026 — スーツを脱いで、プロと戦え。" style="display:block;width:100%;max-width:1200px;height:auto;margin:0 auto;">
-</div>
-<!-- ▲ MAIN TOP HERO IMAGE ▲ -->
+<!-- ▼ PRISM CUP MAINVISUAL ▼ -->
+<header class="pc-mv">
+  <div class="pc-mv-frame">
+    <img src="prismcup_top.png" alt="PRISM CUP 2026 — スーツを脱いで、プロと戦え。">
+  </div>
+  <div class="pc-mv-tag">Official Notice — 参加企業向け</div>
+  <p class="pc-mv-sub">「仕事仲間と本気で遊ぶ」が、最高のチームビルディングになる。</p>
+  <div class="pc-mv-meta">
+    <span>📅 2026.07.04 SAT</span>
+    <span>🏟 アソビル（横浜）</span>
+    <span>⏰ 18:00 — 23:00</span>
+  </div>
+</header>
+<div class="pc-mv-fade"></div>
+<!-- ▲ PRISM CUP MAINVISUAL ▲ -->
 
 <div class="page">
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-badge">Official Notice</div>
-    <div class="hero-title">PRISM CUP 2026</div>
-    <div class="hero-sub">参加企業向け 正式ご案内</div>
-    <div class="hero-catchcopy">「仕事仲間と本気で遊ぶ」が、最高のチームビルディングになる。</div>
-  </div>
 
   <div class="body">
 
