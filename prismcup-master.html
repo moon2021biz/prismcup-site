@@ -332,9 +332,9 @@
 
     <a href="prismcup-prospect-list.html" class="doc-card type-sales">
       <div class="doc-card-tag tag-sales">集客</div>
-      <h3>🎯 参加企業候補リスト</h3>
-      <p>18社・S/A/Bランク・連絡先・社長情報・キラーワード付き</p>
-      <div class="doc-card-footer">→ アプローチ順位・進捗管理</div>
+      <h3>🎯 参加企業候補リスト <span class="doc-new-badge">更新</span></h3>
+      <p>18社・S/A/Bランク・連絡先・社長情報・キラーワード付き<br><strong style="color:#ff7088;">▶ 全18社トークスクリプト追加済み（2026.5.6更新）</strong></p>
+      <div class="doc-card-footer">→ アプローチ順位・進捗管理・電話スクリプト</div>
     </a>
 
     <a href="prismcup-dm-templates.html" class="doc-card type-sales">
@@ -387,6 +387,37 @@
     </a>
 
   </div>
+
+
+  <!-- ── 営業リスト インライン埋め込み ── -->
+  <div class="section-title" id="prospect-section">🎯 参加企業候補リスト（インライン）</div>
+  <div style="background:var(--dark2); border:1px solid rgba(255,255,255,0.07); border-radius:14px; overflow:hidden; margin-bottom:40px;">
+    <div style="padding:14px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.07);">
+      <span style="font-size:12px; color:var(--muted);">18社 ｜ S/A/Bランク ｜ 全社トークスクリプト付き ｜ 最終更新: 2026年5月6日</span>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <span id="iframe-toggle-label" style="font-size:12px; color:var(--sky); cursor:pointer; user-select:none;" onclick="toggleProspect()">▼ 折りたたむ</span>
+        <a href="prismcup-prospect-list.html" target="_blank" style="font-size:11px; color:var(--muted); text-decoration:none; border:1px solid rgba(255,255,255,0.12); padding:3px 10px; border-radius:6px;">別タブ ↗</a>
+      </div>
+    </div>
+    <div id="prospect-iframe-wrap" style="height:800px; overflow:hidden; transition:height 0.3s ease;">
+      <iframe src="prismcup-prospect-list.html" id="prospect-iframe"
+        style="width:100%; height:100%; border:none; display:block;"
+        title="参加企業候補リスト"></iframe>
+    </div>
+  </div>
+  <script>
+    function toggleProspect() {
+      var wrap = document.getElementById('prospect-iframe-wrap');
+      var label = document.getElementById('iframe-toggle-label');
+      if (wrap.style.height === '0px') {
+        wrap.style.height = '800px';
+        label.textContent = '▼ 折りたたむ';
+      } else {
+        wrap.style.height = '0px';
+        label.textContent = '▶ 展開する';
+      }
+    }
+  </script>
 
   <!-- SCHEDULE -->
   <div class="section-title">⏰ 当日タイムライン（概要）</div>

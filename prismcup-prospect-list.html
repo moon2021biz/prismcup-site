@@ -62,15 +62,33 @@
   .strategy-box ol { padding-left: 20px; }
   .strategy-box li { margin-bottom: 10px; font-size: 14px; }
   .footer { text-align: center; padding: 24px; color: var(--muted); font-size: 12px; margin-top: 40px; }
+
+  .script-box { font-size: 13px; background: linear-gradient(135deg, #ede7f6 0%, #f3e5f5 100%); border-radius: 8px; padding: 0; margin-top: 10px; border: 1px solid #ce93d8; overflow: hidden; }
+  .script-box summary { font-weight: 700; color: #6a1b9a; font-size: 12px; letter-spacing: 1px; cursor: pointer; padding: 10px 14px; display: block; user-select: none; list-style: none; }
+  .script-box summary::-webkit-details-marker { display: none; }
+  .script-box summary::before { content: "▶ "; transition: 0.2s; }
+  details[open].script-box summary::before { content: "▼ "; }
+  .script-box summary:hover { background: rgba(156,39,176,0.06); }
+  .script-inner { padding: 0 14px 14px; }
+  .script-open { background: #f8f0ff; border-radius: 6px; padding: 10px 14px; margin: 6px 0 10px; font-style: italic; color: #4a148c; font-size: 13px; border-left: 3px solid #9c27b0; line-height: 1.65; }
+  .script-label { font-weight: 700; color: #6a1b9a; font-size: 11px; letter-spacing: 0.5px; margin: 10px 0 4px; text-transform: uppercase; }
+  .script-points { padding-left: 0; margin: 4px 0; list-style: none; }
+  .script-points li { padding: 4px 0 4px 24px; position: relative; font-size: 13px; line-height: 1.65; }
+  .script-points li::before { content: "💬"; position: absolute; left: 0; top: 4px; font-size: 12px; }
+  .script-objection { background: #fff8e1; border-radius: 6px; padding: 9px 13px; margin-top: 8px; font-size: 12px; border-left: 3px solid #ffa000; line-height: 1.65; }
+  .script-close { background: #e8f5e9; border-radius: 6px; padding: 9px 13px; margin-top: 8px; font-size: 13px; font-weight: 600; color: #1b5e20; border-left: 3px solid #43a047; line-height: 1.65; }
   @media (max-width: 600px) { .header h1 { font-size: 22px; } .card-header { flex-direction: column; } .summary-grid { grid-template-columns: 1fr 1fr; } .card-contact { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
 <div class="header">
+  <div style="text-align:center; padding:0 0 16px;">
+    <img src="prism cup logo.png" alt="PRISM CUP" style="height:80px; width:auto; display:inline-block;">
+  </div>
   <h1>PRISM CUP — 参加企業候補リスト</h1>
   <p>横浜アソビル開催 ｜ 企業対抗フットサルリーグ ｜ 目標6社 → 候補18社リストアップ</p>
-  <p style="margin-top:8px; font-size:12px; opacity:0.7;">作成日: 2026年4月11日 ｜ 株式会社MOON / TrustFit</p>
+  <p style="margin-top:8px; font-size:12px; opacity:0.7;">作成日: 2026年4月11日 ｜ 最終更新: 2026年5月6日 ｜ 株式会社MOON / TrustFit</p>
 </div>
 
 <div class="container">
@@ -99,7 +117,7 @@
       <span>📍 みなとみらい4-4-1（横浜駅徒歩10分）</span>
       <span>👥 約388名</span>
       <span>🏢 野村総研51%＋味の素49%</span>
-      <span>👤 代表取締役社長: <strong>植木 心</strong>（2026年4月就任）</span>
+      <span>👤 代表取締役社長: <strong>植木 心</strong>（2025年4月就任）</span>
     </div>
     <div class="card-contact">
       <div class="contact-item"><span class="icon">🌐</span><a href="https://www.nri-st.co.jp/" target="_blank">nri-st.co.jp</a></div>
@@ -116,18 +134,33 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>みなとみらい勤務の若手SE中心。NRIグループの健康経営施策＋福利厚生予算あり。7〜8名のチーム編成は部署単位で組みやすい。アソビルへ徒歩圏内。</div>
     <span class="approach-tag">💡 人事部・福利厚生担当へ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「NRIシステムテクノ様でしょうか。株式会社MOONの〇〇と申します。人事部の福利厚生ご担当の方はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社がReloClubのジム法人会員補助やオフィスにマッサージルームを完備されているとお伺いし、社員の健康・チームビルディングにご関心が高いと思いご連絡しました。」</li>
+          <li>「横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を開催します。プロサッカー選手と同じピッチで戦えるイベントで、みなとみらいから徒歩圏内です。」</li>
+          <li>「植木新社長ご就任直後のタイミングで、新体制の最初の社内イベントとしてご活用いただける絶好の機会です。」</li>
+        </ul>
+        <div class="script-objection">❓「予算が…」→「福利厚生費として1チーム10万円です。年間研修費の一部として処理される企業様が多いです。まずは資料だけでもご覧いただけますか？」</div>
+        <div class="script-close">✅「では、詳細資料をお送りしてもよろしいですか？ご担当者様のメールアドレスをお教えいただけますと幸いです。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 2 -->
   <div class="company-card rank-s">
     <div class="card-header">
-      <h3>2. ティアンドエス株式会社</h3>
+      <h3>2. ティアンドエスグループ株式会社 <span style="font-size:12px;color:#e94560;">※2024年6月社名変更</span></h3>
       <div><span class="badge badge-s">S評価</span><span class="badge badge-industry">IT・SI</span></div>
     </div>
     <div class="card-meta">
       <span>📍 みなとみらい3-6-3 MMパークビル11F（横浜駅徒歩12分）</span>
       <span>👥 約302名</span>
-      <span>🏢 東証グロース上場（4055）</span>
+      <span>🏢 東証グロース上場（4055）｜2024年6月に持株会社化</span>
       <span>👤 代表取締役社長: <strong>武川 義浩</strong></span>
     </div>
     <div class="card-contact">
@@ -139,10 +172,26 @@
       <div class="kw-title">KILLER WORD — この企業に刺さるポイント</div>
       <div class="kw-item"><strong>上場企業のエンゲージメント施策</strong> — グロース上場企業は株主・投資家への「人的資本経営」アピールが必要。PRISM CUP参加は健康経営の実績として開示できる</div>
       <div class="kw-item"><strong>AI・半導体テーマで平均年齢が若い</strong> — 有休取得しやすく「ワークライフバランス」評価が高い社風。終業後イベント参加のハードルが低い</div>
+      <div class="kw-item"><strong>2024年に持株会社化で組織再編中</strong> — 新体制への移行期は社内文化・エンゲージメント施策に注力しやすいタイミング</div>
       <div class="kw-source">出典: <a href="https://irbank.net/E35824" target="_blank">IRBank T&S</a> / <a href="https://www.openwork.jp/" target="_blank">OpenWork口コミ</a></div>
     </div>
     <div class="card-reason"><strong>選定理由：</strong>AI・半導体関連IT企業。上場企業として社員エンゲージメント施策に投資する動機あり。みなとみらいオフィスからアソビル直通。</div>
     <span class="approach-tag">💡 IR・広報経由でアプローチ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「ティアンドエスグループ様でしょうか。株式会社MOONの〇〇と申します。広報ご担当の方はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社がグロース市場に上場されており、人的資本経営の情報開示を強化されていると拝察し、ご連絡いたしました。」</li>
+          <li>「横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を開催します。参加実績は健康経営の取り組みとして統合報告書・IR資料に記載できるコンテンツになります。」</li>
+          <li>「2024年の持株会社化を経て新体制への移行期にある今、社員エンゲージメントを高める施策として最適なタイミングです。」</li>
+        </ul>
+        <div class="script-objection">❓「社外イベントは…」→「当日の写真・動画素材を採用サイトや社内報に無償でご提供できます。まずご覧いただけますか？」</div>
+        <div class="script-close">✅「資料をメールでお送りしてよろしいですか？ご担当者様のメールアドレスをいただけますか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 3 -->
@@ -172,6 +221,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>独立系中堅企業で意思決定が速い。デスクワーク中心のエンジニアが多く運動機会への需要が高い。横浜駅至近。</div>
     <span class="approach-tag">💡 総務部への直接アプローチ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「IDAJ様でしょうか。株式会社MOONの〇〇と申します。総務部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社が年2回の全社キックオフや社内MVP表彰を実施されているとお伺いし、社員の一体感を大切にされていると思いご連絡しました。」</li>
+          <li>「横浜ランドマークタワーから徒歩圏内のアソビルで、企業対抗フットサルリーグ『PRISM CUP』を開催します。プロサッカー選手との対戦・プロATによる施術体験がセットになっています。」</li>
+          <li>「デスクワーク中心のエンジニアの方々にこそ、普段できない本格的なスポーツ体験が喜ばれています。」</li>
+        </ul>
+        <div class="script-objection">❓「予算が組まれていて…」→「来期のキックオフとの連動企画としてご検討いただけます。まず概要資料をお送りしましょうか？」</div>
+        <div class="script-close">✅「5分だけお時間をいただき、どんなイベントかご説明させてください。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 4 -->
@@ -200,6 +264,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>アソビルへの距離が最も近い候補。IT/SES系の若手中心でフットサル親和性が高い。チーム1組分を出しやすい規模。</div>
     <span class="approach-tag">💡 代表・中川社長へ直接提案</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「カールビット様でしょうか。株式会社MOONの〇〇と申します。中川社長はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社と同じ横浜駅エリアで、企業対抗フットサルリーグ『PRISM CUP』をアソビルで開催します。御社から徒歩6分で、会社帰りにそのまま参加いただけます。」</li>
+          <li>「プロサッカー選手と同じピッチで戦える体験で、IT・SES系の若いチームに非常に盛り上がっています。1チーム10万円で福利厚生費処理が可能です。」</li>
+          <li>「御社規模（約110名）であれば社長のご判断で即日動けると思い、直接ご連絡しました。」</li>
+        </ul>
+        <div class="script-objection">❓「忙しいな…」→「3分だけよろしいですか？移動なしで参加できる点だけお伝えしたいんです。」</div>
+        <div class="script-close">✅「来週、5分だけアソビルでお会いできますか？実際の会場を見ていただくのが一番早いかと思います。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 5 -->
@@ -212,7 +291,7 @@
       <span>📍 横浜市中区花咲町2-65-6 コウノビルMM21 6-A（桜木町駅徒歩2分）</span>
       <span>👥 50〜150名規模</span>
       <span>🏢 ソフトウェア開発（2010年設立）</span>
-      <span>👤 代表取締役: <strong>要確認</strong>（公式サイトに未掲載）</span>
+      <span>👤 代表取締役: <strong>廣木 真一</strong></span>
     </div>
     <div class="card-contact">
       <div class="contact-item"><span class="icon">🌐</span><a href="https://www.ever-g.co.jp/" target="_blank">ever-g.co.jp</a></div>
@@ -227,7 +306,22 @@
       <div class="kw-source">出典: <a href="https://www.ever-g.co.jp/" target="_blank">公式サイト 採用情報</a></div>
     </div>
     <div class="card-reason"><strong>選定理由：</strong>桜木町はアソビルから1駅。エンジニア中心の若い組織でイベント文化が根付いている。10万円/チームは福利厚生費で即決。</div>
-    <span class="approach-tag">💡 代表直接アプローチ（電話 → フォーム）</span>
+    <span class="approach-tag">💡 廣木代表へ直接アプローチ（電話 → フォーム）</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「エヴァーグリーン様でしょうか。株式会社MOONの〇〇と申します。廣木社長はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社がリモートワークを早くから導入され、お花見やボウリング大会など社内イベントを積極的に開催されているとお伺いしました。」</li>
+          <li>「リモートが主体だからこそ、年に一度リアルで全力に汗をかく場が社員の結束を生みます。横浜の企業対抗フットサルリーグ『PRISM CUP』にぜひご参加ください。」</li>
+          <li>「桜木町から電車1本、アソビルでプロサッカー選手と対戦できる体験で、社内コミュニケーション活性化に抜群の効果があります。」</li>
+        </ul>
+        <div class="script-objection">❓「フットサル未経験が多くて…」→「初心者でも楽しめるルール設計です。むしろリモート組が初めてリアルで繋がる場として最高の演出ができます。」</div>
+        <div class="script-close">✅「今年の社内イベントカレンダーに加えていただけるよう、資料をお送りしてもいいですか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 6 -->
@@ -257,6 +351,19 @@
     <div class="card-reason"><strong>選定理由：</strong>参加企業としてだけでなく、共催・集客パートナーとして機能する可能性あり。同社のネットワーク経由で他企業への紹介も期待。</div>
     <span class="approach-tag">💡 代表・関村氏へNote/Instagram DM</span>
     <span class="approach-tag">💡 共催・コラボ提案が最有効</span>
+    <details class="script-box">
+      <summary>✉️ DM文面（Instagram / Note）（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📩 Instagram DM / Note コメント文</div>
+        <div class="script-open">「関村さん、はじめまして。株式会社MOONの〇〇と申します。funbalanceさんの企業対抗フットサル大会、第2回まで開催された記事を拝見してファンになりました。<br><br>実は横浜アソビルで『PRISM CUP』という企業対抗フットサルリーグを立ち上げています。現役Jリーガー・プロ選手が参加する上位版のイベントです。<br><br>関村さんが東北・仙台エリアで培ったノウハウと、私たちの横浜エリアの展開を組み合わせて、共催またはコンサル的な形でご一緒できないかと思いご連絡しました。<br><br>10分だけZoomでお話できますか？」</div>
+        <div class="script-label">📌 会話が始まったら押すポイント</div>
+        <ul class="script-points">
+          <li>「第1回で1週間満席になったノウハウを横浜でも活かしたいです。集客メソッドを教えていただけますか？」（相手を承認しつつ協力を引き出す）</li>
+          <li>「共催なら費用・リスクゼロでPRISM CUPに御社ブランドをのせられます。東北×横浜のネットワーク展開に繋がります。」</li>
+        </ul>
+        <div class="script-close">✅「まずZoomで顔合わせだけでも。今週・来週でご都合いかがですか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- ============ A評価 ============ -->
@@ -281,7 +388,7 @@
     </div>
     <div class="killer-box">
       <div class="kw-title">KILLER WORD — この企業に刺さるポイント ★最強★</div>
-      <div class="kw-item"><strong>「健康経営優良法人2026」大規模法人部門に3年連続認定</strong> — 健康経営のガチ企業。PRISM CUP参加は「健康経営の実践事例」としてそのまま次年度申請に使える</div>
+      <div class="kw-item"><strong>「健康経営優良法人2026」大規模法人部門に3年連続認定（確認済）</strong> — 健康経営のガチ企業。PRISM CUP参加は「健康経営の実践事例」としてそのまま次年度申請に使える</div>
       <div class="kw-item"><strong>オフィスにバランスボール椅子・スタンディングデスク・水槽</strong> — 社員の身体ケアに本気で投資している。AT体験は「オフィス外でのヘルスケア施策」として提案可能</div>
       <div class="kw-item"><strong>くるみん認定（2009/2017）取得</strong> — 子育て支援企業。男性育休推進と「家族ぐるみの健康」を重視。PRISM CUPの写真を社内報・採用サイトに活用できる点が刺さる</div>
       <div class="kw-item"><strong>企業理念「社員の健康な暮らしが基盤」</strong> — exa way Visionに明記。提案書で引用すれば「御社の理念に合致したイベントです」とストレートに訴求できる</div>
@@ -290,6 +397,21 @@
     <div class="card-reason"><strong>選定理由：</strong>健康経営の取り組みが18社中で最も充実。ただし1,250名の大企業ゆえ意思決定に時間がかかる可能性があり、A評価に。早期アプローチ推奨。</div>
     <span class="approach-tag">💡 人事部 健康経営推進担当へ</span>
     <span class="approach-tag">💡 「健康経営優良法人の実績づくり」で訴求</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「エクサ様でしょうか。株式会社MOONの〇〇と申します。人事部の健康経営推進担当の方はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社が『健康経営優良法人2026』に3年連続で認定されたことを拝見しました。おめでとうございます。健康経営に本気で取り組まれている御社にぜひご提案があります。」</li>
+          <li>「横浜アソビルで開催する企業対抗フットサルリーグ『PRISM CUP』は、来年度の健康経営優良法人申請において『運動機会の提供』実績として活用いただけます。」</li>
+          <li>「プロのATによる施術体験も含まれており、御社のexa way Visionに掲げる『社員の健康な暮らし』の実践事例として社内報・採用サイトにも使えます。」</li>
+        </ul>
+        <div class="script-objection">❓「稟議が必要で…」→「まず担当者様に資料をお送りして、内部検討のたたき台にしていただけますか？」</div>
+        <div class="script-close">✅「来年度の健康経営申請スケジュールに間に合わせるためにも、早めにご検討いただけると助かります。資料をお送りしてよろしいですか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 8 -->
@@ -316,6 +438,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>新横浜エリアの中堅企業。営業・技術の若手が多く、263名から7〜8人チームを組む余裕あり。新横浜→横浜はJR10分。</div>
     <span class="approach-tag">💡 総務・人事へ提案書送付</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「パルテック様でしょうか。株式会社MOONの〇〇と申します。人事部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社が社員寮・食堂・ジム補助など社員への投資を積極的にされていると拝察し、ご連絡いたしました。」</li>
+          <li>「新横浜から横浜まで電車10分の距離にある横浜アソビルで、企業対抗フットサルリーグ『PRISM CUP』を開催します。プロ選手との対戦・プロATの施術がついて1チーム10万円です。」</li>
+          <li>「御社のような半導体・技術系企業の若手が『仕事以外でも同期と勝負できる場』として非常に盛り上がります。」</li>
+        </ul>
+        <div class="script-objection">❓「新横浜から遠くて…」→「JRで10分です。会社帰りにそのまま参加できます。まず資料だけご覧いただけますか？」</div>
+        <div class="script-close">✅「ご担当者様のメールアドレスをいただければ、詳細資料と参加企業の声をお送りします。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 9 -->
@@ -344,6 +481,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>EC×テック企業でカジュアルな社風。168名規模で経営層の即決が期待できる。女性80%は「インクルーシブなスポーツイベント」として独自の訴求が可能。</div>
     <span class="approach-tag">💡 高乗社長 or 経営管理部へ直接</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「チップワンストップ様でしょうか。株式会社MOONの〇〇と申します。高乗社長はいらっしゃいますか？（不在の場合：経営管理部のご担当者様はいらっしゃいますか？）」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社の社員の80%が女性とお伺いしております。横浜アソビルで開催する『PRISM CUP』は、運動が苦手な方・女性でも楽しめる特別ルールを設けています。」</li>
+          <li>「フットサルですが、チーム内での声かけや役割分担が勝敗を決める競技で、女性メンバーがMVPになることもよくあります。」</li>
+          <li>「育休復帰率100%を誇る御社の社員が、ダイバーシティの体現の場として参加いただけると嬉しいです。」</li>
+        </ul>
+        <div class="script-objection">❓「スポーツが苦手な人が多くて…」→「参加者の半数以上が運動習慣のない方です。むしろそういう方が一番楽しんでいます。」</div>
+        <div class="script-close">✅「一度オンラインで5分だけお話させてください。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 10 -->
@@ -370,6 +522,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>みなとみらい直結の好立地。国際物流系の営業マンはスポーツイベントへの参加意欲が高い傾向。異業種交流のビジネスマッチング期待値も高い。</div>
     <span class="approach-tag">💡 営業部門経由でアプローチ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「テクノトランス様でしょうか。株式会社MOONの〇〇と申します。営業部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「みなとみらいセンタービルから徒歩圏内のアソビルで、企業対抗フットサルリーグ『PRISM CUP』を開催します。会社帰りにそのまま参加できます。」</li>
+          <li>「モンゴル・中央アジアを相手に戦う御社の営業チームなら、プロサッカー選手相手にも負けないと思います（笑）。本気で戦える場を提供します。」</li>
+          <li>「異業種企業との試合を通じて、横浜のビジネスネットワークも広がります。」</li>
+        </ul>
+        <div class="script-objection">❓「人が集まるか…」→「7〜8名でOKです。部署内でパパっと声をかけられる規模です。参加費も福利厚生費で処理できます。」</div>
+        <div class="script-close">✅「詳細資料をお送りします。ご担当者様のメールアドレスをいただけますか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 11 -->
@@ -400,6 +567,19 @@
     <div class="card-reason"><strong>選定理由：</strong>コミュニティ創生が事業のため、企業間交流イベントへの共感度が非常に高い。少人数のため合同チーム提案も有効。</div>
     <span class="approach-tag">💡 甲田代表へメール/SNSで直接</span>
     <span class="approach-tag">💡 コミュニティ文脈での共催提案</span>
+    <details class="script-box">
+      <summary>✉️ メール / SNS DM文面（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📩 メール / Instagram DM</div>
+        <div class="script-open">「甲田さん、はじめまして。株式会社MOONの〇〇です。AsMamaさんの『社会共助』というミッションに深く共感してご連絡しました。<br><br>横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を立ち上げます。横浜エリアの企業が競い合い、助け合い、繋がる場です。まさにAsMamaさんが地域に広めたいコミュニティの企業版です。<br><br>参加企業としてだけでなく、横浜の地域コミュニティ共創パートナーとしてご一緒できませんか。お時間15分、オンラインでお話できますか？」</div>
+        <div class="script-label">📌 会話が始まったら押すポイント</div>
+        <ul class="script-points">
+          <li>「フルリモートだからこそ、年1回リアルで集まるイベントの価値は絶大です。AsMamaさんのスタッフにとっても最高のチームビルディングになります。」</li>
+          <li>「厚労省・横浜市との連携実績がある御社がご参加いただけると、他の企業への案内でも信頼感が全然違います。」</li>
+        </ul>
+        <div class="script-close">✅「まず顔合わせのZoomだけでも。今週・来週でご都合いかがですか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 12 -->
@@ -427,6 +607,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>横浜市港北区のメーカー系中堅企業。エンジニア多数在籍で運動機会への潜在需要あり。342名から1チーム編成は容易。</div>
     <span class="approach-tag">💡 人事・総務部へアプローチ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「エヌエフ回路設計ブロック様でしょうか。株式会社MOONの〇〇と申します。人事総務部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「横浜市港北区の計測・電子機器の技術者集団として御社は有名ですが、今回はエンジニアの方々への運動機会提供という形でご連絡しました。」</li>
+          <li>「横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を開催します。デスクワーク中心の方が仕事の枠を超えてチームで戦える場で、部門横断の交流にも最適です。」</li>
+          <li>「プロのATによる施術体験も当日提供されるため、エンジニアの体のメンテナンスとしても喜ばれています。」</li>
+        </ul>
+        <div class="script-objection">❓「運動習慣がなくて…」→「初心者でも楽しめるルールです。342名の御社なら、部署対抗チームで社内大会のように盛り上がれます。」</div>
+        <div class="script-close">✅「資料をお送りしてよろしいでしょうか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 13 -->
@@ -455,6 +650,21 @@
     <div class="card-reason"><strong>選定理由：</strong>横浜健康経営認証を取得しているため、健康増進イベントへの投資動機が明確。200名規模で若手中心にチーム編成可能。</div>
     <span class="approach-tag">💡 安全衛生・福利厚生部門へ</span>
     <span class="approach-tag">💡 「横浜健康経営認証」の実績づくりで訴求</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「奈良建設様でしょうか。株式会社MOONの〇〇と申します。安全衛生・人事部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社が横浜健康経営認証を取得されているとお伺いし、ご連絡いたしました。横浜アソビルで開催する『PRISM CUP』は、認証の実績スコアアップに直結する運動機会提供イベントです。」</li>
+          <li>「御社は『地域未来牽引企業』にも選定されており、横浜の地元企業として地域イベントを盛り上げていただくことに大変意義があると思います。」</li>
+          <li>「建設業の現場スタッフには体力自慢が多いと思います。プロサッカー選手を相手に本気で戦える場として、社員のモチベーション向上にも繋がります。」</li>
+        </ul>
+        <div class="script-objection">❓「現場と本部でメンバーが集まるか…」→「現場系と本部系で混合チームを組む企業様も多いです。工期外のオフシーズンにぜひ。」</div>
+        <div class="script-close">✅「横浜健康経営認証の次回更新に向けた実績として、詳細をお送りしてよろしいですか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- ============ B評価 ============ -->
@@ -485,6 +695,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>サッカースポンサー実績ありでフットサルイベントへの理解度が高い。シフト勤務の社員が多いため本部スタッフ中心のチーム編成が現実的。</div>
     <span class="approach-tag">💡 本部人事・経営企画へ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「カメガヤ様でしょうか。株式会社MOONの〇〇と申します。本部の人事または経営企画のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御社が大豆戸FC（横浜F・マリノスの練習場に隣接するクラブ）のオフィシャルパートナーをされていたと拝見し、スポーツへのご理解が深い企業様と思いご連絡しました。」</li>
+          <li>「横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を開催します。御社ブランド『フィットケア』そのものである健康・フィットネスのイベントで、本部スタッフが参加することでブランドを体現できます。」</li>
+          <li>「プロATの施術体験も含まれており、『フィットケア』のブランドコンセプトと完全に合致します。」</li>
+        </ul>
+        <div class="script-objection">❓「シフト制でメンバーが…」→「シフト勤務の方が多い中、本部チームだけでも7〜8名集めていただければ参加できます。」</div>
+        <div class="script-close">✅「詳細資料をお送りしてよろしいでしょうか？ご担当者様のメールアドレスをいただければと思います。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 15 -->
@@ -511,6 +736,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>483名の中堅メーカー。製造業の部門間交流ニーズ高。TrustFitのトレーナー派遣法人需要にもつながる可能性。</div>
     <span class="approach-tag">💡 人事・総務部へ提案書</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「山王様でしょうか。株式会社MOONの〇〇と申します。人事総務部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「横浜市港北区に本社がある上場メーカーとして御社は有名ですが、今回は社員交流イベントのご提案でご連絡しました。」</li>
+          <li>「横浜アソビルで企業対抗フットサルリーグ『PRISM CUP』を開催します。483名の御社なら、部門別に2チーム出場も可能です。設計部vs製造部、営業vs技術など、社内で盛り上がれる軸がいくつもあります。」</li>
+          <li>「年功序列の壁を超えて同じピッチで戦えるため、世代間交流にも抜群の効果があります。」</li>
+        </ul>
+        <div class="script-objection">❓「いきなり2チームは…」→「まず1チームで様子を見ていただき、次回以降に追加チームを出す企業様も多いです。」</div>
+        <div class="script-close">✅「資料をお送りします。ご担当者様のメールアドレスをお教えいただけますか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 16 -->
@@ -539,6 +779,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>エネルギー業界の安全・健康管理意識と親和性高。217名規模で若手中心に1チーム編成可能。</div>
     <span class="approach-tag">💡 安全衛生・人事部門へ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「三和エナジー様でしょうか。株式会社MOONの〇〇と申します。安全衛生または人事部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「燃料配送という安全第一の業界で働く皆様の体のケアという観点でご連絡しました。横浜アソビルで開催する『PRISM CUP』には、プロのATによる身体チェック・施術体験が含まれています。」</li>
+          <li>「毎日身体を使って働くドライバー・現場スタッフの方が、プロのケアを体験できる機会はなかなかありません。参加するだけで『体の点検』ができます。」</li>
+          <li>「高松社長がメディアで積極的に発信されているご様子から、新しいチャレンジに前向きな社風と拝察しました。」</li>
+        </ul>
+        <div class="script-objection">❓「現場スタッフが集まるか…」→「本部スタッフだけでも7〜8名集まれば参加できます。バックオフィスチームでご参加いただいた企業も多いです。」</div>
+        <div class="script-close">✅「資料をお送りしてよろしいでしょうか？」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 17 -->
@@ -565,6 +820,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>359名のメーカー系中堅企業。技術者中心で運動不足解消×チームビルディングの提案が刺さりやすい。</div>
     <span class="approach-tag">💡 総務・人事部門へ提案書</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「ジェイ・アール・シー特機様でしょうか。株式会社MOONの〇〇と申します。総務部のご担当者様はいらっしゃいますか？」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「海上自衛隊向けに40年以上、高精度な技術を提供し続けてきた御社の技術者の皆様に、仕事の枠を超えた真剣勝負の場をご提供したくご連絡しました。」</li>
+          <li>「横浜アソビルで開催する企業対抗フットサルリーグ『PRISM CUP』は、プロサッカー選手と同じピッチで対戦できるイベントです。日常では体験できない本物の緊張感と達成感があります。」</li>
+          <li>「デスクワーク中心の音響解析エンジニアの方々が、スポーツを通じて部署横断で繋がれる場としても最適です。」</li>
+        </ul>
+        <div class="script-objection">❓「フットサル未経験が多くて…」→「参加企業の多くはほぼ運動習慣のない方です。普段と違う姿でチームが固まるイベントです。」</div>
+        <div class="script-close">✅「まず資料をご覧いただけますか？プロ選手との対戦動画も含まれており、きっとご興味いただけると思います。」</div>
+      </div>
+    </details>
   </div>
 
   <!-- 18 -->
@@ -586,7 +856,7 @@
     </div>
     <div class="killer-box">
       <div class="kw-title">KILLER WORD — この企業に刺さるポイント ★レバレッジ最大★</div>
-      <div class="kw-item"><strong>フットサル大会を第14回まで開催した実績あり</strong> — 協会自身がフットサル大会を運営してきた。PRISM CUPは「プロ選手参加の上位版」として既存大会からのアップグレード提案が可能</div>
+      <div class="kw-item"><strong>フットサル大会を第14回まで開催（2025年11月8日開催確認済）</strong> — 協会自身がフットサル大会を毎年運営。PRISM CUPは「プロ選手参加の上位版」として既存大会からのアップグレード提案が可能。第15回（2026年）も開催予定。</div>
       <div class="kw-item"><strong>加盟340社以上 = 1件のコンタクトで複数チーム獲得</strong> — 協会を通じて加盟IT企業に一括案内できる。S評価の個社アプローチと並行して動かせる効率的なルート</div>
       <div class="kw-item"><strong>「福利厚生委員会」が存在</strong> — 加盟企業の福利厚生をテーマにした委員会がある。PRISM CUPを「加盟企業の福利厚生イベント」として位置づけられる</div>
       <div class="kw-item"><strong>横浜駅西口から徒歩5分 = アソビル至近</strong> — 協会事務局がアソビルの目と鼻の先。「うちの近所でやるイベント」として親近感が湧く</div>
@@ -594,6 +864,21 @@
     </div>
     <div class="card-reason"><strong>選定理由：</strong>1団体へのアプローチで複数チーム獲得のレバレッジが効く。フットサル大会運営実績があるため、提案のハードルが最も低い。B評価は「団体であり企業ではない」ため。実質的な影響力はS級。</div>
     <span class="approach-tag">💡 協会事務局 or 福利厚生委員会へ</span>
+    <details class="script-box">
+      <summary>📞 トークスクリプト（クリックで展開）</summary>
+      <div class="script-inner">
+        <div class="script-label">📞 電話第一声</div>
+        <div class="script-open">「神奈川県情報サービス産業協会様でしょうか。株式会社MOONの〇〇と申します。福利厚生委員会のご担当者様はいらっしゃいますか？（事務局の方にお取次ぎいただけますか？）」</div>
+        <div class="script-label">📌 本題トーク（3つ）</div>
+        <ul class="script-points">
+          <li>「御協会が第14回まで毎年フットサル大会を開催されているとお伺いし、フットサルを通じた加盟企業の交流・健康増進に取り組まれていることに深く共感してご連絡しました。」</li>
+          <li>「横浜アソビルで開催する企業対抗フットサルリーグ『PRISM CUP』は、御協会フットサル大会の『プロ選手参加の上位版』として位置づけていただける企画です。現役Jリーガーと同じピッチで対戦できます。」</li>
+          <li>「加盟340社様に向けてご案内いただけると、1件のコンタクトで複数チームの参加が期待できます。御協会のネットワークをぜひご活用させてください。」</li>
+        </ul>
+        <div class="script-objection">❓「協会として動くのは…」→「主催・関与でなくても構いません。加盟企業様へのご案内だけでもしていただけますか？翌年以降は御協会の公式イベントとの連携も検討したいです。」</div>
+        <div class="script-close">✅「福利厚生委員会の次回ミーティングでご紹介いただけるよう、資料を事前にお送りしてよろしいでしょうか？」</div>
+      </div>
+    </details>
     <span class="approach-tag">💡 既存フットサル大会の「プロ版アップグレード」で訴求</span>
   </div>
 
@@ -628,7 +913,7 @@
 
 <div class="footer">
   PRISM CUP 参加企業候補リスト ｜ 株式会社MOON / TrustFit ｜ 2026年4月11日作成<br>
-  代表者情報・キラーワードは2026年4月時点のWeb公開情報に基づく
+  最終更新: 2026年5月6日 ｜ 代表者情報・キラーワードはWeb公開情報に基づく（2026年5月時点）
 </div>
 
 </body>
